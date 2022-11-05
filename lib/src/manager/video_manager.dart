@@ -184,7 +184,7 @@ class FlickVideoManager extends ChangeNotifier {
         !videoPlayerValue!.hasError &&
         videoPlayerController!.value.buffered.isNotEmpty == true &&
         videoPlayerController!.value.position.inSeconds >=
-            videoPlayerController!.value.buffered[0].end.inSeconds;
+            videoPlayerController!.value.buffered[videoPlayerController!.value.buffered.length-1].end.inSeconds;
 
     _notify();
   }
